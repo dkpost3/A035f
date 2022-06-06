@@ -1,0 +1,25 @@
+/*Tab A7 T618 code for AX6189DEV-20|AX6189DEV-26 by suyurui at 2021/12/21 start*/
+
+&spi2 {
+	status = "okay";
+	cs-gpios = <0> ;
+
+	himax_touch@0 {
+		compatible = "himax,hxcommon-ot9";
+		reg = <0>;
+		status = "okay";
+		spi-max-frequency = <10000000>;
+		interrupt-parent = <&ap_gpio>;
+		interrupts = <144 0x2004>;
+		himax,panel-sense-nums = <18 32>;
+		himax,panel-coords = <0 800 0 1340>;
+		himax,display-coords = <0 800 0 1340>;
+		himax,panel-max-points = <10>;
+		himax,int-is-edge = <1>;
+		himax,irq-gpio = <&ap_gpio 144 GPIO_ACTIVE_HIGH>;
+		himax,rst-gpio = <&ap_gpio 145 GPIO_ACTIVE_HIGH>;
+		report_type = <1>;
+	};
+
+};
+/*Tab A7 T618 code for AX6189DEV-20|AX6189DEV-26 by suyurui at 2021/12/21 end*/

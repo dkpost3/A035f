@@ -1,0 +1,21 @@
+/*
+ * Please #include "../lcd/Tab_A7_Unisoc/xxx.dtsi"
+ */
+
+/*Tab A7 T618 code for SR-AX6189A-01-137 by huangzhongjie at 2021/12/20 start*/
+#include "../lcd/Tab_A7_Unisoc/lcd_tab_a7_unisoc_default_panel_mipi.dtsi"
+#include "../lcd/Tab_A7_Unisoc/lcd_hx83102e_gx_hsd_mipi_hdp.dtsi"
+#include "../lcd/Tab_A7_Unisoc/lcd_hx83102e_hlt_hsd_mipi_hdp.dtsi"
+/*Tab A7 T618 code for SR-AX6189A-01-137 by huangzhongjie at 2021/12/20 end*/
+
+/*Tab A7 Lite T618 code for SR-AX6300-01-23 by huangzhongjie at 2022/01/03 start*/
+&vddsim1 {
+    regulator-always-on;
+};
+/*Tab A7 Lite T618 code for SR-AX6300-01-23 by huangzhongjie at 2022/01/03 start*/
+
+&panel {
+    avdd-gpio = <&ap_gpio 139 GPIO_ACTIVE_HIGH>;
+    avee-gpio = <&ap_gpio 138 GPIO_ACTIVE_HIGH>;
+    reset-gpio = <&ap_gpio 50 GPIO_ACTIVE_HIGH>;
+};
